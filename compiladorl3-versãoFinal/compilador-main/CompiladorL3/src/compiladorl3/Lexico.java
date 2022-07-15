@@ -68,7 +68,7 @@ public class Lexico {
 		}
 		return false;
 	}
-	// Identificar se char é letra minúscula
+	// Identificar se char é letra maiúscula
 	private boolean isLetraUpCase(char c) {
 		return (c >= 'A') && (c <= 'Z');
 	}
@@ -231,14 +231,14 @@ public class Lexico {
 						return new Token(lexema.toString(), Token.TIPO_OPERADOR_ARITMETICO);
 					} else {
 						lexema.append(c);
-						estado = 11;
+						estado = 11;   //comentários
 					}
 				} else {
 					this.back();
 					return new Token(lexema.toString(), Token.TIPO_OPERADOR_ARITMETICO);
 				}
 			case 9:
-				if ((c == '\n' || c == '\t' || c == ' ' || c == '\r') && (c != '=' || c == '<' || c == '>')) {
+				if ((c == '\n' || c == '\t' || c == ' ' || c == '\r') && (c != '=' || c != '<' || c != '>')) {
 					this.back();
 					return new Token(lexema.toString(), Token.TIPO_ATRIBUICAO);
 				} else if (c == '=') {

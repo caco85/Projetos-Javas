@@ -1,2 +1,33 @@
-if for main
+n
+n1
+n123
+1
+123
+1.0
+11.0
+11.22
+)({}
+    ;
+AcB
+123abs
+1_
++
+-
+/
+*
+++
+--
+"aa bb"
+'a'
+=
+<
+>
+<=
+>=
+==
+!=
+for 
+while
+aaa
+//aaaaasdasda
 $

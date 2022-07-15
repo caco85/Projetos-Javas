@@ -1,0 +1,9 @@
+if
+else
+do 
+
+for 
+while
+aaa
+//aaaaasdasda
+$
