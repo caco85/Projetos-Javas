@@ -1,5 +1,4 @@
 package restaurante;
-
 /**
  *
  * @author Renato Nunes
@@ -11,14 +10,14 @@ public class Prato {
     public synchronized void set(int idProdutor, int valor) {
         while (disponivel == true) {
             try {
-                System.out.println("Produtor #" + idProdutor + " esperando...");
+                System.out.println("Cozinheiro #" + idProdutor + " esperando...");
                 wait();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         conteudo = valor;
-        System.out.println("Produtor #" + idProdutor + " colocou " + conteudo);
+        System.out.println("Cozinheiro #" + idProdutor + " colocou " + conteudo);
         disponivel = true;
         notifyAll();
     }
@@ -26,14 +25,14 @@ public class Prato {
     public synchronized int get(int idConsumidor) {
         while (disponivel == false) {
             try {
-                System.out.println("Consumidor #" + idConsumidor
+                System.out.println("Cliente #" + idConsumidor
                         + " esperado...");
                 wait();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        System.out.println("Consumidor #" + idConsumidor + " consumiu: "
+        System.out.println("Cliente #" + idConsumidor + " consumiu: "
                 + conteudo);
         disponivel = false;
         notifyAll();

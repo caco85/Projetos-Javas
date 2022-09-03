@@ -20,6 +20,6 @@ public class Cliente extends Thread{
         for (int i = 0; i < totalConsumir; i++) {
             pilha.get(codigoCli);
         }
-        System.out.println("Consumidor #" + codigoCli + " concluido!");
+        System.out.println("Cliente #" + codigoCli + " concluido!");
     }
 }

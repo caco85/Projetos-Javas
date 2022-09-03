@@ -19,7 +19,7 @@ public class Cozinheiro extends Thread{
         for (int i = 0; i < producaoTotal; i++) {
             pilha.set(codigoCozinheiro, i);
         }
-        System.out.println("Produtor #" + codigoCozinheiro + " concluido!");
+        System.out.println("Cozinheiro #" + codigoCozinheiro + " concluido!");
     }
     
 }
